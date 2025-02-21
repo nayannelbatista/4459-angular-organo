@@ -44,6 +44,10 @@ export class LivroService {
     )
   }
 
+  adicionarLivro(novoLivro: Livro): Observable<Livro> {
+    return this.httpClient.post<Livro>(this.API_URL, novoLivro)
+  }
+
 
 
 
