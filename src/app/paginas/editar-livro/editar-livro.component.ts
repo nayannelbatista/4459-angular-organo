@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormularioComponent } from '../../componentes/formulario/formulario.component';
 import { Livro } from '../../componentes/livro/livro';
 import { LivroService } from '../../services/livro.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-editar-livro',
@@ -15,7 +15,8 @@ export class EditarLivroComponent implements OnInit{
 
   constructor(
     private livroService: LivroService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -25,5 +26,11 @@ export class EditarLivroComponent implements OnInit{
         this.livro = livro
       })
     }
+  }
+
+  editarLivro(livro: Livro) {
+    this.livroService.editarLivro(livro).subscribe(() => {
+      this.router.navigate(['lista-livros'])
+    })
   }
 }
