@@ -50,7 +50,7 @@ O desenvolvimento do projeto utilizou as seguintes técnicas e tecnologias:
 
 ## 📁 Link do Figma
 
-Você pode [acessar o figma do projeto aqui](ttps://www.figma.com/community/file/1473330944329863214).
+Você pode [acessar o figma do projeto aqui](https://www.figma.com/community/file/1473330944329863214).
 
 ## 🛠️ Abrir e rodar o projeto
 
